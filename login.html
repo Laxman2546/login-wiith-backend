@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            background-image: url(https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?q=80&w=1342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            display: flex;
+            font-family: 'Open Sans', sans-serif;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            background-size: cover;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(15, 14, 14, 0.065);
+            backdrop-filter:blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            font-weight: 400;
+         /* Added a background color to ensure readability */
+        }
+        .container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .form-group i {
+            margin-right: 10px;
+        }
+        .form-group label {
+            flex: 1;
+        }
+        .form-group input {
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: rgb(73, 218, 73);
+            color: aliceblue;
+            font-size: large;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: rgb(149, 236, 149);
+        }
+        .signup-link {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .signup-link p {
+            margin-right: 5px;
+        }
+        .signup-link a {
+            color: rgb(0, 132, 255);
+            text-decoration: none;
+        }
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="login.php" method="post">
+            <h1>Login</h1>
+            <div class="form-group">
+                <i class="fa fa-user"></i>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <input type="submit" class="btn" value="Login" name="login_user">
+            <div class="signup-link">
+                <p>Don't have an account?</p>
+                <a href="index.html">Sign up</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
